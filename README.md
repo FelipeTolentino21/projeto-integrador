@@ -1,2 +1,2 @@
 # projeto-integrador
-Repositório destinado a matéria de Projeto Integrador I
+Repositório destinado a matéria de Projeto Integrador
