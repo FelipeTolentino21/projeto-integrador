@@ -1,0 +1,28 @@
+.Form{
+    margin: 0;
+    padding: 0;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 30px;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+
+    width: 250px;
+
+    gap: 10px;
+}
+
+.botao-form{
+    height: 35px;
+    background-color: rgb(87, 0, 87);
+    color: white;
+
+    cursor: pointer;
+}
