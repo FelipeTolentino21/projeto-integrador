@@ -1,6 +1,5 @@
 # Organização de Projeto React
 
-# Organização de Arquivo e Pastas
 ## 1 - Estrutura clara  e modular
 - src/components/ → Para componentes reutilizáveis (Button.jsx, Card.jsx, etc.).
 - src/pages/ → Para páginas do app (Home.jsx, Dashboard.jsx, etc.).
