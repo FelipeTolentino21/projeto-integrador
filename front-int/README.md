@@ -1,12 +1,29 @@
-# React + Vite
+# Organização de Projeto React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Organização de Arquivo e Pastas
+## 1 - Estrutura clara  e modular
+- src/components/ → Para componentes reutilizáveis (Button.jsx, Card.jsx, etc.).
+- src/pages/ → Para páginas do app (Home.jsx, Dashboard.jsx, etc.).
+- src/styles/ → Para arquivos de estilo globais e módulos CSS.
+- src/hooks/ → Para hooks personalizados (useAuth.js, useFetch.js).
+- src/context/ → Para gerenciar contexto global.
+- src/utils/ → Para funções auxiliares (formatDate.js, api.js).
 
-Currently, two official plugins are available:
+## 2 - Nomeação de arquivos
+- Componentes React: PascalCase → LoginForm.jsx, Navbar.jsx
+- CSS/SCSS: camelCase ou kebab-case → navbar.module.css, profilePage.css
+- Páginas: PascalCase → Home.jsx, Profile.jsx
+- Funções utilitárias: camelCase.js → formatDate.js, fetchData.js
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 3 - Comentários no códigos
+. adicionar um código -> fazer um comentário:
+```//lucas - fiz essa função pipipipopopo```
 
-## Expanding the ESLint configuration
+. alterar um código -> deixar o comentário anterior e adicionar a sua
+``` //lucas - fiz... -> felipao - alterei essa parte pq tava errado```
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+obs: comentários curtos e comentários no fim do arquivo
+
+## 4 - Branches no github
+Todos devem criar uma branch e oq vai fazer
+exemplo: lucas-main, felipe-versão, Luis-login-page 1
