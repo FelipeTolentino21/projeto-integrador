@@ -42,7 +42,7 @@ export default function Form() {
     }
 
     return (
-        <div className="Form">
+        <div className="form">
             <div className="ceub-image">
                 <img src={logoceub} alt="ceub-logo" />
             </div>
