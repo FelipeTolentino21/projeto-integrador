@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { supabase } from "../../services/supabase";
+import { useNavigate } from "react-router-dom";
 import logoceub from "../../assets/logo-ceub.webp";
 import "./form.css";
 
-export default function Form() {
+export default function signUp() {
     const [email, setEmail] = useState("");
     const [senha, setSenha] = useState("");
+    const navigate = useNavigate();
 
     async function handleSignUp() {
         if (!email || !senha) {
@@ -15,7 +17,7 @@ export default function Form() {
         
         const { data, error } = await supabase.auth.signUp({
             email,
-            password: senha  // Isso vai funcionar, pois 'password' é o nome que o Supabase espera
+            password: senha,
         });
 
         if (error) {
@@ -23,22 +25,30 @@ export default function Form() {
             return;
         }
 
-        // Verifica se o usuário foi criado corretamente
         if (!data.user) {
             alert("Erro ao obter dados do usuário.");
             return;
         }
 
-        // Salva no banco de dados sem a senha
-        const { error: dbError } = await supabase
+        await supabase.from("users").insert([
+            {
+                id: data.user.id,
+                email,
+            },
+        ]);
+
+        alert("Cadastro realizado!");
+        navigate("/login");
+        
+        /*const { error: dbError } = await supabase
             .from("users")
-            .insert([{ id: data.user.id, email }]); // Removendo a senha
+            .insert([{ id: data.user.id, email }]);
 
         if (dbError) {
             alert("Erro ao salvar no banco: " + dbError.message);
         } else {
             alert("Cadastro realizado com sucesso!");
-        }
+        */
     }
 
     return (
