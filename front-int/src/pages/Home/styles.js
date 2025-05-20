@@ -31,8 +31,8 @@ export const Header = styled.div`
 
 export const Container = styled.div`
     text-align: center;
-    //margin-top: 2rem;
-    //padding: 1rem;
+    background-color: #42154E;
+    height: 100vh;
     font-family: "Inter", sans-serif;
 `;
 
@@ -40,15 +40,26 @@ export const Board = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
+    height: 70vh;
+    overflow-y: auto;
+    padding: 1rem;
+    align-items: center;
+    background-color:rgb(241, 237, 237);
 `;
 
 export const Card = styled.div`
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
     text-align: center;
-    
+    margin: 0 auto;
+    height: 15rem;
+    max-width: 200px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    //justify-content: space-between;
+
     p {
         margin: 0.5rem 0 0;
         font-size: 0.9rem;
@@ -71,11 +82,11 @@ export const CardDescription = styled.p`
 export const AddButton = styled.button`
     background-color: #42154E;
     color: white;
-    font-size: 2rem;
+    font-size: 5rem;
     border: none;
     border-radius: 50%;
-    width 20px;
-    height: 20px
+    width 10rem;
+    height: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;

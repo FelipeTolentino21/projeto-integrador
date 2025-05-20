@@ -3,23 +3,42 @@ import {Container, Header, Board, Card, CardDescription, CardTitle, AddButton} f
 import logo from "../../assets/logo-ceub.webp";
 
 export default function Home() {
+    const [cards, setCards] = useState([
+        {
+            title: "Adicione novos cursos",
+            description: "",
+            schedule: "",
+        },
+    ]);
+
+    const addCard = () => {
+        const newCard = {
+            title: "Novo Curso",
+            description: "Descrição",
+            schedule: "Horário",
+        };
+        setCards([...cards, newCard]);
+
+        setCards((prevCards) => {
+            const updatedCards = [...prevCards, newCard];
+            return updatedCards.length > 1 ? updatedCards.slice(1) : updatedCards;
+        });
+    };
+
     return (
         <Container>
             <Header>
                 <img src={logo} alt="" />
             </Header>
             <Board>
-                <Card>
-                    <CardTitle>Minicurso Java</CardTitle>
-                    <CardDescription>Lorem ipsum dolor, sit amet 
-                        consectetur adipisicing elit. 
-                        Iusto, repellat rem. Laboriosam esse id 
-                        aliquam sunt, corporis temporibus, 
-                        a dolore necessitatibus ex dolor 
-                        laborum velit iusto possimus veniam 
-                        dignissimos quisquam?</CardDescription>
-                </Card>
-                <AddButton>+</AddButton>
+                {cards.map((card, index) => (
+                    <Card key = {index}>
+                        <CardTitle>{card.title}</CardTitle>
+                        <CardDescription>{card.description}</CardDescription>
+                        <p>{card.schedule}</p>
+                    </Card>
+                ))}
+                <AddButton onClick={addCard}>+</AddButton>
             </Board>
         </Container>
     );
