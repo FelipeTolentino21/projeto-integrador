@@ -1,18 +1,9 @@
-import { useNavigate } from "react-router-dom"
-import { supabase } from "../../services/supabase";
+import Header from "../../components/Header";
 
-export default function Home() {
-    const navigate = useNavigate();
-
-    async function handleLogout() {
-        await supabase.auth.signOut();
-        localStorage.removeItem("token");
-        navigate("/login");
-    }
+export default function Home(){
     return(
         <div>
-            oi, home
-            <button onClick={handleLogout}>Sair</button>
+            <Header />
         </div>
     )
 }

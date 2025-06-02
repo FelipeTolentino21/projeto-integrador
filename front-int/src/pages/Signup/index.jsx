@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { supabase } from "../../services/supabase";
 
+import "./form.css"
+
 export default function Signup(){
     const [email, setEmail] = useState('')
     const [nome, setNome] = useState('')
@@ -33,7 +35,7 @@ export default function Signup(){
         setMessage('Usuário cadastrado com sucesso!')
     }
     return(
-        <form onSubmit={handleSignup}>
+        <form onSubmit={handleSignup} className="form">
             <h2>Cadastro</h2>
             <label>Nome: </label>
             <input 
