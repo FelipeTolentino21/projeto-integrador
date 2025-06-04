@@ -1,0 +1,24 @@
+form{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+form img{
+    height: 70px;
+    width: 120px;
+}
+form input{
+    height: 30px;
+    width: 200px;
+}
+form button{
+    height: 40px;
+    width: 210px;
+}
+.link{
+    text-decoration: none;
+}

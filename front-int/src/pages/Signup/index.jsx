@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { supabase } from "../../services/supabase";
+import { Link } from "react-router-dom";
 
-import "./form.css"
+import "../Login/login.css"
+import ceub from "../../assets/logo-ceub.webp"
 
 export default function Signup(){
     const [email, setEmail] = useState('')
@@ -35,32 +37,34 @@ export default function Signup(){
         setMessage('Usuário cadastrado com sucesso!')
     }
     return(
-        <form onSubmit={handleSignup} className="form">
+        <form onSubmit={handleSignup}>
+            <img src={ceub} alt="imagem ceub" />
             <h2>Cadastro</h2>
-            <label>Nome: </label>
             <input 
             type="text"
             value={nome}
+            placeholder="Nome"
             onChange={(e) => setNome(e.target.value)}
             required
             />
 
-            <label>Email: </label>
             <input
             type="email"
             value={email}
+            placeholder="Email"
             onChange={(e) => setEmail(e.target.value)}
             required
             />
 
-            <label>Senha: </label>
             <input 
             type="password"
             value={senha}
+            placeholder="Senha"
             onChange={(e) => setSenha(e.target.value)}
             required
             />
             <button type="submit">Cadastrar</button>
+            <Link className="link" to={"/login"}>Já possui uma conta? Entre aqui.</Link>
             <p>{message}</p>
         </form>
     )

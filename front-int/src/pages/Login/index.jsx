@@ -1,11 +1,15 @@
 import { useState } from "react";
 import { supabase } from "../../services/supabase";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+
+
+import "./login.css"
+import ceub from "../../assets/logo-ceub.webp"
 
 export default function Login() {
     const [email, setEmail] = useState("");
     const [senha, setSenha] = useState("");
-    const [message, setMessage] =useState("");
+    const [message, setMessage] = useState("");
     const navigate = useNavigate();
 
     async function handleLogin(e) {
@@ -28,25 +32,28 @@ export default function Login() {
     }
     return (
         <form onSubmit={handleLogin}>
-            <label>Email: </label>
-            <input 
-            type="email" 
-            className="email" 
-            value={email} 
-            onChange={(e) => setEmail(e.target.value)}
-            required
+            <img src={ceub} alt="imagem ceub" />
+            <div>
+                <input
+                    type="email"
+                    className="email"
+                    value={email}
+                    placeholder="Email"
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                />
+            </div>
+            <input
+                type="password"
+                className="senha"
+                value={senha}
+                placeholder="Senha"
+                onChange={(e) => setSenha(e.target.value)}
+                required
             />
 
-            <label>Senha: </label>
-            <input 
-            type="password" 
-            className="senha" 
-            value={senha} 
-            onChange={(e) => setSenha(e.target.value)} 
-            required
-            />
-
-            <button type="submit">Entrar</button>
+            <button type="submit" className="button">Acessar</button>
+            <Link className="link" to={"/signup"}>Criar conta</Link>
 
             <p>{message}</p>
         </form>
