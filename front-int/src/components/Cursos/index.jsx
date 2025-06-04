@@ -58,6 +58,7 @@ export default function Cursos() {
             type="text" 
             onChange={(e) => setDescricao(e.target.value)}
             required/>
+            
         </form>
     )
 }
