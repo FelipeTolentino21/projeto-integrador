@@ -1,0 +1,27 @@
+.header {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: blueviolet;
+    padding: 15px;
+}
+
+.popup {
+    all: unset;
+    cursor: pointer;
+}
+
+.modal{
+    position: absolute;
+    top: 100%;
+    left: 73%;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: baseline;
+    gap: 10px;
+    border: 5px solid #b839e6;
+    background-color: rgb(255, 240, 252);
+    padding: 10px;
+}
