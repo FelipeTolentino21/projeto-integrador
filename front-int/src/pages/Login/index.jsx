@@ -5,6 +5,7 @@ import { useNavigate, Link } from "react-router-dom";
 
 import "./login.css"
 import ceub from "../../assets/logo-ceub.webp"
+import ceubHeader from "../../assets/logo-ceub-header.webp"
 
 export default function Login() {
     const [email, setEmail] = useState("");
@@ -31,31 +32,38 @@ export default function Login() {
         }, 1500)
     }
     return (
-        <form onSubmit={handleLogin}>
-            <img src={ceub} alt="imagem ceub" />
-            <div>
-                <input
-                    type="email"
-                    className="email"
-                    value={email}
-                    placeholder="Email"
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                />
+        <div className="page-border">
+            <div className="top-image-container">
+                <img src={ceubHeader} alt="imagem cima ceub" className="top-image" />
             </div>
-            <input
-                type="password"
-                className="senha"
-                value={senha}
-                placeholder="Senha"
-                onChange={(e) => setSenha(e.target.value)}
-                required
-            />
+            <div className="login-container">
+                <form onSubmit={handleLogin} className="login-form">
+                    <h1 className="tittle">MONITORIA</h1>
+                    <div>
+                        <input
+                            type="email"
+                            className="email"
+                            value={email}
+                            placeholder="Email"
+                            onChange={(e) => setEmail(e.target.value)}
+                            required
+                        />
+                    </div>
+                    <input
+                        type="password"
+                        className="senha"
+                        value={senha}
+                        placeholder="Senha"
+                        onChange={(e) => setSenha(e.target.value)}
+                        required
+                    />
 
-            <button type="submit" className="button">Acessar</button>
-            <Link className="link" to={"/signup"}>Criar conta</Link>
-
-            <p>{message}</p>
-        </form>
+                    <button type="submit" className="button">Acessar</button>
+                    <Link className="link" to={"/signup"}>Criar conta</Link>
+                    <p>{message}</p>
+                </form>
+            </div>
+        </div>
     )
+
 }

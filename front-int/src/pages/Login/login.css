@@ -1,4 +1,4 @@
-form{
+form {
     height: 50vh;
     display: flex;
     flex-direction: column;
@@ -7,18 +7,88 @@ form{
     gap: 15px;
 }
 
-form img{
+form img {
     height: 70px;
     width: 120px;
 }
-form input{
+
+form input {
     height: 30px;
     width: 200px;
 }
-form button{
+
+form button {
     height: 40px;
     width: 210px;
 }
-.link{
+
+#root {
+    background-color: #F3F3F4;
+}
+
+.tittle {
+    font-family: 'Inter', sans-serif;
+}
+
+.button {
+    background-color: #42154E;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.link {
     text-decoration: none;
+}
+
+.login-container {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.login-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.login-form {
+    position: relative;
+    z-index: 2;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 400px;
+    width: 90%;
+}
+
+.page-border {
+    border-top: 75px solid #42154E;
+    border-right: 15px solid #42154E;
+    border-bottom: 15px solid #42154E;
+    border-left: 15px solid #42154E;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.top-image-container {
+    width: 100%;
+    height: 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -70px;
+    z-index: 10;
+}
+
+.top-image {
+    height: 70px;
 }
