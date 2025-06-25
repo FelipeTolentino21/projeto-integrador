@@ -1,0 +1,12 @@
+.page-border-main {
+  border-top: 85px solid #42154E;
+    border-right: 15px solid #42154E;
+    border-bottom: 15px solid #42154E;
+    border-left: 15px solid #42154E;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+.conteudo {
+  margin-top: 130px; 
+  padding: 20px;
+}

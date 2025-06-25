@@ -4,7 +4,6 @@ import { useNavigate, Link } from "react-router-dom";
 
 
 import "./login.css"
-import ceub from "../../assets/logo-ceub.webp"
 import ceubHeader from "../../assets/logo-ceub-header.webp"
 
 export default function Login() {
