@@ -15,14 +15,14 @@
 - Funções utilitárias: camelCase.js → formatDate.js, fetchData.js
 
 ## 3 - Comentários no códigos
-. adicionar um código -> fazer um comentário:
-```//lucas - fiz essa função pipipipopopo```
+- Adicionar um código -> fazer um comentário:
+```// Lucas - Fiz essa função```
 
-. alterar um código -> deixar o comentário anterior e adicionar a sua
-``` //lucas - fiz... -> felipao - alterei essa parte pq tava errado```
+- Alterar um código -> deixar o comentário anterior e adicionar a sua:
+```// Lucas - Fiz... -> Felipe - Alterei essa parte```
 
 obs: comentários curtos e comentários no fim do arquivo
 
 ## 4 - Branches no github
-Todos devem criar uma branch e oq vai fazer
-exemplo: lucas-main, felipe-versão, Luis-login-page 1
+Todos devem criar uma branch e nomeá-la com o que vai ser alterado. 
+Exemplo: `lucas-main, felipe-versão, luis-login-page`
