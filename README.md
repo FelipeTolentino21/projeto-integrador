@@ -3,15 +3,25 @@ Este repositório tem como objetivo armazenar os arquivos da matéria de Projeto
 
 Esse projeto consiste em criar um site para facilitar o processo de entrega de certificados dos minicursos/oficinas organizados e realizados pela monitoria da universidade propriamente dita.
 
-## Tecnologias
-Esse projeto está sendo desenvolvido com as seguintes tecnologias:
-- React.js
-- Vite
-- Hmtl, CSS e JavaScript
-- 🔗 Bibliotecas como Router, Axios, Cors e Supabase.
+O projeto surgiu da proposta de facilitar o envio dos certificados das oficinas da monitoria do CEUB, pois, atualmente, o processo é lento e está causando confusão entre os alunos. Por exemplo, alguns alunos não recebem os certificados mesmo após meses depois da conclusão de uma oficina. Até nós que estamos desenvolvendo o projeto já fomos afetados por este problema. A partir dessa proposta, nós modelamos estratégias para solucionar esse problema, sendo a solução o desenvolvimento de nossa aplicação.
+
+## Parte técnica
+#### Esse projeto está sendo desenvolvido com as seguintes tecnologias:
+- React.js.
+- Vite.
+- Hmtl, CSS e JavaScript.
+- Bibliotecas como Router, Axios e Cors.
+- Supabase como banco de dados
+#### Além dessas tecnologias, também estamos utilizando das seguintes ferramentas:
+- ClickUp - Alocação de tarefas, documentação do projeto e histórias de usuários.
+- Figma - Design do site
+- Discord e WhatsApp - Comunicação
+- Github - Versionamento do projeto
+
+*Vale informar que o projeto está majoritariamente no Github, então seu desenvolvimento está sendo remoto, com exceções de dias em que estamos presentes nos laboratórios de informática do CEUB*
 
 ## Como rodar o projeto
-Antes de começar, certifique-se de ter instalado:
+#### Antes de começar, certifique-se de ter instalado:
 - Node.js ou Yarn 
 
 #### Passo a passo
@@ -24,9 +34,11 @@ Antes de começar, certifique-se de ter instalado:
 ## Objetivos iniciais
 Alguns dos nossos objetivos para esse projeto consistem em:
 1. Desenvolver a tela de cadastro e login ✔️
-2. Desenvolver a parte de criação de turmas e conexão delas aos monitores envolvidos
-3. Desenvolver a tela de emissão de certificados (mesmo que em fase de teste)
-4. Adicionar/Alterar estrutura do banco de dados para funcionar em relação aos itens anteriores
+2. Desenvolver a parte de criação de turmas e conexão delas aos monitores envolvidos - Previsão: 10/09/2025
+3. Desenvolver a tela de emissão de certificados (mesmo que em fase de teste) - Previsão: 10/10/2025
+4. Adicionar/Alterar estrutura do banco de dados para funcionar em relação aos itens anteriores - Tarefa contínua
+
+*Todas as datas contidas nessa secção são apenas estimativas.*
 
 ## Estrutura do Projeto
 A seguir, temos a estrutura do projeto ao acessar a pasta `certificados-monitoria`.
@@ -59,6 +71,6 @@ A princípio, o projeto disponibilizará as seguintes funcionalidades.
 Para saber mais, acesse o [Escopo do projeto](https://docs.google.com/document/d/1RyOy5Z-JlPvY33MGmqHTKD1hUmSSMS9YT-ahRDMf9HI/edit?usp=sharing).
 
 ## Colaboradores
-- Felipe Tolentino: Desenvolvedor, Designer de UI/UX, Gerente de projeto
-- Luis Guilherme: Desenvolvedor, Designer de UI/UX
+- Felipe Tolentino: Desenvolvedor, Designer de UI/UX, Gerente de projeto, Documentador
+- Luis Guilherme: Desenvolvedor, Designer de UI/UX, Documentador
 - Lucas Daniel: Desenvolvedor, Gerente de projeto, DBA (Administrador de Banco de Dados), Especialista em Segurança
